@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./resources/css/index.css">
+  <title>Specificity Rules</title>
+</head>
+<body>
+  
+  <header>
+    <h1>CSS Specificity</h1>
+  </header>
+
+  <main>
+
+    <section class="demonstration1">
+      <h2>Type Specific</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Test Column</th>
+            <th>Specification</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hey you!</td>
+            <td class="opaque">Target all table data elements/cells (&lt;td&gt;) in the test column (Type specific)</td>
+            <td class="opaque">Background Color: Aqua</td>
+          </tr>
+          <tr>
+            <td>I'm learning Web Development!</td>
+            <td class="opaque hidden">Give the 2nd and 3rd data cells (&lt;td&gt;) in the test column a 'class' atribute and target it (Class specific)</td>
+            <td class="opaque hidden">Background Color: Dark Golden Rod</td>
+          </tr>
+          <tr>
+            <td>How great is that?!</td>
+            <td class="opaque hidden">Give the 3rd data cell (&lt;td&gt;) in the test column a unique 'id' attribute as well, and target the 'id' attribute (Id specific)</td>
+            <td class="opaque hidden">Background Color: Orange Red</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="demonstration2">
+      <h2>Class Specific</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Test Column</th>
+            <th>Specification</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hey you!</td>
+            <td class="opaque">Target all table data elements/cells (&lt;td&gt;) in the test column (Type specific)</td>
+            <td class="opaque">Background Color: Aqua</td>
+          </tr>
+          <tr>
+            <td class="class-specific">I'm learning Web Development!</td>
+            <td class="opaque">Give the 2nd and 3rd data cells (&lt;td&gt;) in the test column a 'class' atribute and target it (Class specific)</td>
+            <td class="opaque">Background Color: Dark Golden Rod</td>
+          </tr>
+          <tr>
+            <td class="class-specific" id="id-specific">How great is that?!</td>
+            <td class="opaque hidden">Give the 3rd data cell (&lt;td&gt;) in the test column a unique 'id' attribute as well, and target the 'id' attribute (Id specific)</td>
+            <td class="opaque hidden">Background Color: Orange Red</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="demonstration3">
+      <h2>Id Specific</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Test Column</th>
+            <th>Specification</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hey you!</td>
+            <td class="opaque">Target all table data elements/cells (&lt;td&gt;) in the test column (Type specific)</td>
+            <td class="opaque">Background Color: Aqua</td>
+          </tr>
+          <tr>
+            <td class="class-specific">I'm learning Web Development!</td>
+            <td class="opaque">Give the 2nd and 3rd data cells (&lt;td&gt;) in the test column a 'class' atribute and target it (Class specific)</td>
+            <td class="opaque">Background Color: Dark Golden Rod</td>
+          </tr>
+          <tr>
+            <td class="class-specific" id="id-specific">How great is that?!</td>
+            <td class="opaque">Give the 3rd data cell (&lt;td&gt;) in the test column a unique 'id' attribute as well, and target the 'id' attribute (Id specific)</td>
+            <td class="opaque">Background Color: Orange Red</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="explanation">
+      <h2>Explanation</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Ranking <br> (Least Specific to Most Specific) </th>
+            <th>Specification Type</th>
+            <th>Explanation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3</td>
+            <td class="opaque">Type Specific</td>
+            <td class="opaque">Targets ALL the elements of a given HTML tag type<br><br> (ie. specifying &lt;td&gt; as a CSS celector will target ALL &lt;td&gt; elements unless overriden)</td>
+          </tr>
+          <tr>
+            <td class="class-specific">2</td>
+            <td class="opaque">Class specific</td>
+            <td class="opaque">Targets ONLY the elements with the specific 'class' attribute, regardless of type specification <br><br> (ie. I gave the class attribute 'class-specific' to the 2nd and 3rd data cells in the test column and styled them differently than the element specific styling)</td>
+          </tr>
+          <tr>
+            <td id="id-specific2">1</td>
+            <td class="opaque">Id specific</td>
+            <td class="opaque">Targets ONLY the elements with the specific 'id' attribute, regardless of class or type specification <br><br> (ie. I gave the id attribute 'id-specific' to the 3rd data cell in the test column and styled it differently than the class specific styling)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+  <footer>
+    <h2>Conlusion</h2>
+    <article>
+      <p>
+        <span>'Id' specific selectors</span> have the most authority! 
+      </p>
+      <p> 
+        <span>'Class' specific selectors</span> have the 2nd most authority.  If an 'id' specific selector is not present, 
+        the a class specific selector will have the authority! 
+      </p>
+      <p>  
+        <span>'Type' specific selectors</span> have the least authority.  If no other selectors are present other than the type of the tag itself 
+        (ie. &lt;p&gt;), then the type selector has no other choice but to have authority!
+      </p>
+    </article>
+  </footer>
+
+</body>
+</html>

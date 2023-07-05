@@ -1,0 +1,84 @@
+* {
+  margin: 0; 
+  padding: 0;
+}
+
+h1 {
+  margin: 50px 0;
+}
+
+.demonstration1 td, .demonstration2 td, .demonstration3 td, .explanation td {
+  background-color: aqua;
+  font-weight: bold;
+}
+
+.demonstration1 .opaque, .demonstration2 .opaque, .demonstration3 .opaque, .explanation .opaque {
+  background-color: hsl(188, 41%, 82%);
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  font-weight: normal;
+}
+
+.demonstration2 .class-specific, .demonstration3 .class-specific, .explanation .class-specific {
+  background-color: darkgoldenrod;
+}
+
+.demonstration3 #id-specific, .explanation #id-specific2 {
+  background-color: orangered;
+}
+
+.demonstration1 td.hidden, .demonstration2 td.hidden, .demonstration3 td.hidden {
+  color: rgb(160, 156, 156);
+  background-color: rgb(160, 156, 156);
+}
+
+body {
+  background-color: hsl(188, 41%, 82%);
+  font-family: sans-serif;
+}
+
+header, h2 {
+  text-align: center;
+}
+
+h2 {
+  color: hsl(188, 70%, 24%);
+  margin: 70px 0 20px 0;
+}
+
+table {
+  border: 2px solid hsl(187, 34%, 47%);
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+th {
+  background-color: hsl(188, 64%, 65%);
+  color: black;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 30px 30px;
+}
+
+footer {
+  margin-bottom: 50px;
+}
+
+article {
+  border: 2px solid hsl(187, 34%, 47%);
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+p {
+  padding: 30px 30px;
+  border-top: 1px dotted white;
+}
+
+span {
+  font-weight: bold;
+}
